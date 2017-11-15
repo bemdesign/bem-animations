@@ -1,0 +1,152 @@
+.animation {
+
+	&_fade {
+		&_in {
+			opacity: 1;
+			transition: opacity .3s ease-in;
+		}
+		&_out {
+			opacity: 0;
+			transition: opacity .3s ease-out;
+		}
+	}
+
+
+	&_from {
+		&_top {
+			animation: aFromTop .3s ease-in;
+		}
+		&_bottom {
+			animation: aFromBottom .3s ease-in;
+		}
+		&_right {
+			animation: aFromRight .3s ease-in;
+		}
+		&_left {
+			animation: aFromLeft .3s ease-in;
+		}
+	}
+
+	&_to {
+		&_bottom {
+			animation: aToBottom .3s ease-in;
+		}
+		&_top {
+			animation: aToTop .3s ease-in;
+		}
+		&_left {
+			animation: aToLeft .3s ease-in;
+		}
+		&_right {
+			animation: aToRight .3s ease-in;
+		}
+	}
+
+	&_shake_horizontal {
+		animation: aShakeHorizontal .5s ease;
+	}
+	&_shake_radial {
+		animation: aShakeRadial .5s ease;
+	}
+}
+
+@keyframes aFromTop {
+	from {
+		margin-top: -100%;
+	}
+	to {
+		margin-top: 0%;
+	}
+}
+@keyframes aFromBottom {
+	from {
+		margin-top: 100%;
+	}
+	to {
+		margin-top: 0%;
+	}
+}
+@keyframes aFromRight {
+	from {
+		margin-left: 100%;
+	}
+	to {
+		margin-left: 0%;
+	}
+}
+@keyframes aFromLeft {
+	from {
+		margin-left: -100%;
+	}
+	to {
+		margin-left: 0%;
+	}
+}
+
+@keyframes aToBottom {
+	from {
+		margin-top: 0%;
+	}
+	to {
+		margin-top: 100%;
+	}
+}
+@keyframes aToTop {
+	from {
+		margin-top: 0%;
+	}
+	to {
+		margin-top: -100%;
+	}
+}
+@keyframes aToLeft {
+	from {
+		margin-left: 0%;
+	}
+	to {
+		margin-left: -100%;
+	}
+}
+@keyframes aToRight {
+	from {
+		margin-left: 0%;
+	}
+	to {
+		margin-left: 100%;
+	}
+}
+
+@keyframes aShakeHorizontal {
+	20% {
+		margin-right: -15px;
+	}
+	40% {
+		margin-left: -15px;
+	}
+	60% {
+		margin-right: -12px;
+	}
+	80% {
+		margin-left: -12px;
+	}
+	100% {
+		margin-right: -7px;
+	}
+}
+@keyframes aShakeRadial {
+	20% {
+		transform: rotate(5deg);
+	}
+	40% {
+		transform: rotate(-5deg);
+	}
+	60% {
+		transform: rotate(3deg);
+	}
+	80% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(1deg);
+	}
+}
